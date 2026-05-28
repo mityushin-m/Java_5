@@ -1,13 +1,28 @@
 package com.lab5;
 
+
+/**
+ * Вспомогательный файл, содержащий интерфейсы и их реализации
+ * для демонстрации работы внедрения зависимостей.
+ */
+
+/**
+ * Базовый интерфейс для демонстрации.
+ */
 interface SomeInterface {
     void doSomething();
 }
 
+/**
+ * Второй интерфейс для демонстрации множественного внедрения.
+ */
 interface SomeOtherInterface {
     void doSomeOther();
 }
 
+/**
+ * Реализация SomeInterface, печатающая "A".
+ */
 class SomeImpl implements SomeInterface {
     @Override
     public void doSomething() {
@@ -15,6 +30,9 @@ class SomeImpl implements SomeInterface {
     }
 }
 
+/**
+ * Альтернативная реализация SomeInterface, печатающая "B".
+ */
 class OtherImpl implements SomeInterface {
     @Override
     public void doSomething() {
@@ -22,6 +40,9 @@ class OtherImpl implements SomeInterface {
     }
 }
 
+/**
+ * Реализация SomeOtherInterface, печатающая "C".
+ */
 class SODoer implements SomeOtherInterface {
     @Override
     public void doSomeOther() {
